@@ -1,0 +1,7 @@
+<h2>Evaluate Rule</h2>
+<p>{{ rule.rule_string }}</p>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Evaluate</button>
+</form>

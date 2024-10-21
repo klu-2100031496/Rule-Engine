@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rule Engine Home</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"> <!-- Link to your CSS file -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+        a {
+            display: inline-block;
+            margin: 10px 0;
+            padding: 10px 20px;
+            background-color: #5cb85c;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        a:hover {
+            background-color: #4cae4c;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Rule Engine</h1>
+    </header>
+    <main>
+        <p>This application allows you to create, evaluate, and manage rules based on various conditions.</p>
+        <h2>Features</h2>
+        <ul>
+            <li><strong>Create Rules:</strong> Easily define rules using simple expressions.</li>
+            <li><strong>Evaluate Rules:</strong> Check if your data meets the defined rules.</li>
+            <li><strong>View Rule List:</strong> Manage and review all created rules in one place.</li>
+        </ul>
+        <a href="{% url 'create_rule' %}">Create Rules</a>
+        <a href="{% url 'rule_list' %}">View Rule List</a>
+    </main>
+</body>
+</html>

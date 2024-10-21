@@ -1,0 +1,9 @@
+<h2>List of Rules</h2>
+<ul>
+    {% for rule in rules %}
+        <li>
+            {{ rule.rule_string }} 
+            <a href="{% url 'evaluate_rule' rule.id %}">Evaluate</a>
+        </li>
+    {% endfor %}
+</ul>
